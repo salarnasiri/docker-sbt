@@ -1,0 +1,9 @@
+version: '2'
+services:
+  sbt:
+    image: salarn14/docker-sbt:8-2.12.6-0.13.16
+    container_name: sbt
+    hostname: "sbt"
+    command: bash -c "tail -f /dev/null"
+    restart: always
+
