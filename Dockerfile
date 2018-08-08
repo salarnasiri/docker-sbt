@@ -17,6 +17,9 @@ RUN tar -zxf sbt-$SBT_VERSION.tgz && \
 WORKDIR sbt
 RUN ./bin/sbt
 
+# Add sbt link in path
+RUN ln -s /sbt/bin/sbt /bin/sbt
+
 # Define working directory 
 WORKDIR /root
 
