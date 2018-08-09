@@ -1,4 +1,4 @@
-FROM java:8
+FROM jenkinsci/slave:3.10-1
 
 # Env variables 
 ENV SCALA_VERSION 2.12.6
