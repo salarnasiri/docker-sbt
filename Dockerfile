@@ -1,5 +1,7 @@
 FROM jenkinsci/slave:3.10-1
 
+ARG user=jenkins
+USER root
 # Env variables 
 ENV SCALA_VERSION 2.12.6
 ENV SBT_VERSION 0.13.16
@@ -20,6 +22,7 @@ RUN ./bin/sbt
 # Add sbt link in path
 RUN ln -s /sbt/bin/sbt /bin/sbt
 
+USER ${user}
 # Define working directory 
 WORKDIR /root
 
